@@ -26,7 +26,23 @@
   `SUMX()`를 예를 들면, 첫번째 인자로 iteration이 실행될 테이블을 지정하고, 두번째 인자로 계산식이 입력됩니다. 따라서 `Sales_unit = SUMX(판매데이터, 판매데이터[sales]*2)` 같은 수식을 지정할 수 있습니다.
 - Filter context를 바꿀 수 있는 유일한 방법으로는 `CALCULATE(수식, 필터수식...)` 함수가 있습니다.
 
+## 3. Running Total
 
+- DAX의 time intelligence를 활용하면, 누적합계식을 구성할 수 있습니다.
+
+- 누적합계식을 구성할 때에는 `CALCULATE()`함수를 사용하게 되는데, 이때 두번째 파라미터를 활용하여 원하는 context로 누적합계식을 구할 수 있습니다.
+
+- 이때 `DATESYTD()`함수를 필터 컨택스트에 넣어서 계산하면, 손쉽게 년 단위의 누적합계식을 구성할 수 있습니다.
+
+- 또 다른 방식은 필터 컨텍스트에  `FILTER(ALL())` 또는 `FILTER(ALLSELECTED())`함수로  구현할 수도 있습니다. 이 경우는 `ALL()` 또는 `ALLSELECTED()` 안에 누적합계식을 구성할 범위를 정하고, `MAX()` 함수로 기간을 설정하는 방식이 보편적이라고 할 수 있습니다.
+
+  ```DAX
+  누적합계 = CALCULATE(SUM(매출[sales]),
+  				FILTER(ALL(날짜),
+  						날짜[date] <= max(날짜[date])))
+  ```
+
+  
 
 https://www.youtube.com/watch?v=eMh3STI68LA
 
