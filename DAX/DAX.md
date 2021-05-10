@@ -55,6 +55,6 @@
   		  매출데이터[매출액], , DESC, )
   ```
 
-  ## 5.
+  ## 5. TopN
 https://www.youtube.com/watch?v=eMh3STI68LA
 
