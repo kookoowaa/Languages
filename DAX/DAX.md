@@ -42,19 +42,19 @@
   						날짜[date] <= max(날짜[date])))
   ```
 
-  ## 4. Rank
-  
-  - 특정 변수의 순위를 계산할 때에는 `RANKX()` 함수를 사용할 수 있습니다.
-  
-  - 함수명에 X가 붙어 있으므로 iteration을 활용하는 함수임을 가늠할 수 있으며, iteration context에 따라 ranking 산출 기준이 달라지게 됨 또한 가늠할 수 있습니다.
-  
-  - 따라서 `RANKX()` 함수의 파라미터는 크게, 1) context, 2) 산정 기준 열, 3) 정렬 순서를 갖고 가게 됩니다.
-  
+## 4. Rank
+
+- 특정 변수의 순위를 계산할 때에는 `RANKX()` 함수를 사용할 수 있습니다.
+
+- 함수명에 X가 붙어 있으므로 iteration을 활용하는 함수임을 가늠할 수 있으며, iteration context에 따라 ranking 산출 기준이 달라지게 됨 또한 가늠할 수 있습니다.
+
+- 따라서 `RANKX()` 함수의 파라미터는 크게, 1) context, 2) 산정 기준 열, 3) 정렬 순서를 갖고 가게 됩니다.
+
   ```DAX
   판매순위 = RANKX(ALL(매출데이터),
   		  매출데이터[매출액], , DESC, )
   ```
 
-  ## 5. TopN
+## 5. TopN
 https://www.youtube.com/watch?v=eMh3STI68LA
 
