@@ -56,5 +56,12 @@
   ```
 
 ## 5. TopN
+
+## 6.  Moving average
+
+## 7. Data segmentation (If and Switch)
+
+## 8. DAX 테이블 함수
+
 https://www.youtube.com/watch?v=eMh3STI68LA
 
