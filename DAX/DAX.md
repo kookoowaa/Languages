@@ -59,7 +59,7 @@
 
 ## 6.  Moving average
 
-## 7. Data segmentation (If and Switch)
+## 7. Data segmentation (If/Switch)
 
 ## 8. DAX 테이블 함수
 
