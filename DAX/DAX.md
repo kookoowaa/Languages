@@ -68,7 +68,17 @@
 
 ## 6.  Moving average
 
+- 기간을 설정하여 이동평균을 구하는 함수도 지원을 하며 `AVERAGEX()`와 `DATESINPERIOD()`로 구현 가능합니다.
 
+  ```DAX
+  이동평균 = AVERAGEX(
+  			DATESINPERIOD(날짜[날짜], LASTDATE(날짜[날짜]), -7, DAY),
+  			매출액)
+  ```
+
+- 여기서 `ACERAGEX()` 함수는 테이블과 식을 인자로 받아 평균을 반환하는 함수입니다.
+
+- `DATESINPERIOD()` 함수는 계산을 통해 테이블을 반환하는데, 이때 날짜와, 기초날짜, 뒤의 두 파라미터는 범위를 설정하도록 하게 됩니다.
 
 ## 7. Data segmentation (If/Switch)
 
