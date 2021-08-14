@@ -1,3 +1,6 @@
+'usecase: GetLocalWorkbookName(PathOnly:=True)
+'out:.    
+
 Option Explicit
 Private Const ONEDRIVE_TENANTS_REGISTRY_FOLDER As String = "Software\Microsoft\OneDrive\Accounts\Business1\Tenants\"
 Private Const ONEDRIVE_TOTAL_VERSIONS As Long = 3
