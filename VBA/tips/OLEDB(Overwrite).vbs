@@ -1,3 +1,6 @@
+'usecase: 
+'out:     
+
 Sub DeleteAccess()
     Dim strPath     As String
     Dim rs         As New ADODB.Recordset
