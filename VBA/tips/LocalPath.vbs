@@ -1,5 +1,5 @@
-'usecase: GetLocalWorkbookName(PathOnly:=True)
-'out:.    
+'usecase: debug.print(GetLocalWorkbookName(PathOnly:=True))
+'out:     https://.......
 
 Option Explicit
 Private Const ONEDRIVE_TENANTS_REGISTRY_FOLDER As String = "Software\Microsoft\OneDrive\Accounts\Business1\Tenants\"
