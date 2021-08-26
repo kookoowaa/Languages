@@ -45,19 +45,21 @@ person2 = Person("John", "Analyst", 20)
 person3 = Person("John", "Analyst", 20)  
 ```
 
+
+
 ## Dataclass의 강점
 
 ### 1.  Object가 아닌 data 비교가 가능
+
+```python
+
+```
 
 ### 2. dataclass object의 대표값 설정 및 정렬이 가능
 
 ### 3. object의 값 업데이트를 막을 수 있음
 
 ### 4. print 되는 출력 문 포맷을 지정할 수 있음 (디버그)
-
-
-
-
 
 
 
