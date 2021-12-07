@@ -1,6 +1,6 @@
 # Languages
 
-Languages for:
+Stacks for:
 
 > - Data analysis
 > - Web development (backend)
