@@ -13,8 +13,8 @@
 > ## Snackbar
 > 
 > - 팝업 메세지 외에 사용자에게 확인 받거나 선택이 필요할 때 Dialog를 사용
->
-> - [Snackbar 클래스는 Toast를 대체합니다.](https://developer.android.com/training/snackbar?hl=ko) 현재 Toast도 여전히 지원되지만 이제 간략한 임시 메시지를 표시하는 데 Snackbar가 더 많이 사용됩니다.
+> 
+> - [Snackbar 클래스는 Toast를 대체함](https://developer.android.com/training/snackbar?hl=ko) : Toast도 여전히 지원되지만 이제 간략한 임시 메시지를 표시하는 데 Snackbar가 더 많이 사용된다고 공식 문서에서 언급
 > 
 > - 용법은 아래와 같음:
 >   
