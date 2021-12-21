@@ -1,4 +1,4 @@
-# Snackbar, Toast, Dialog, Context
+# Snackbar, Toast, Dialog
 
 > ## Toast
 > 
