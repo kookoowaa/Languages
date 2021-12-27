@@ -25,16 +25,12 @@ var c = 10 * 12.33;
 
 ___
 
-
-
 ### `var` vs `val` vs `const`
 
 - `var`은 얼마든지 값을 갱신할 수 있으나, 변수 타입은 변경할 수 없음
 - `val`은 javascript의 `cont`와 동일한 기능을 수행하며, 한번 선언한 값의 갱신을 지원하지 않음
 
 ___
-
-
 
 ### Comment block (주석처리)
 
@@ -63,8 +59,6 @@ block
 
 ___
 
-
-
 ### Number Types
 
 > #### Integer Types
@@ -87,8 +81,6 @@ ___
 > val myNum = 123 // Int
 > ```
 
-
-
 > #### Float Types
 > 
 > - 소수일 경우 64-bit `Double`을 default로 지정 
@@ -105,6 +97,18 @@ ___
 > val myDouble: Double = 12.384798594;
 > ```
 
+---
 
+### Other Types
 
+> #### Boolean
+> 
+> -  
 
+> #### Character
+> 
+> -  
+
+> #### String
+> 
+> - 
