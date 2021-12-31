@@ -103,12 +103,25 @@ ___
 
 > #### Boolean
 > 
-> -  
-
-> #### Character
+> - 여타 언어에서와 마찬가지로 참/거짓을 의미하며, `true/false` 둘중 하나의 값을 갖게 됨
 > 
-> -  
+> ```kotlin
+> var myBool: boolean = true;
+> myBool = false;
+> ```
 
-> #### String
+> #### Character/String
 > 
-> - 
+> - Character는 하나의 문자를 의미하며, String은 문자**열**을 의미함
+> 
+> ```kotlin
+> var myChar: character = 'a';
+> // myChar = '1123' doesn't work
+> var myStr = "Hello World";
+> var lastCharInStr = myStr[myStr.length - 1];
+> 
+> 
+> print(lastCharInStr)
+> ```
+
+> 
