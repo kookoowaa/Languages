@@ -1,11 +1,6 @@
 fun main(){
-
-    // immutable variable
-    // TODO: Add new functionality
-
-    val myName = "Pablo"
-    print("this is ${myName}")
-
-    val myF = 2.22;
-    val myFloat: Float = 13.37F
+    val strWorld: String = "Hello World";
+    var strFirstWord = strWorld[0];
+    print("this is to print $strWorld, starting with $strFirstWord; ")
+    print("and it is ${strWorld.length} length long")
 }
