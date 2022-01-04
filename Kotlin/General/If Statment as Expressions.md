@@ -1,6 +1,6 @@
 # If Statement as Expression
 
-- In kotlin, variable can be assigned as a result of if statement as follows;
+- In kotlin, variable can be assigned as a result of `if` statement as follows;
   
   ```kotlin
   var age :Int = 11;
@@ -14,3 +14,5 @@
   println(odd_even)
   // Even
   ```
+
+- The same applies to `when` statement
