@@ -10,7 +10,9 @@
 
 ## 2. in range
 
-- in kotlin, `..` covers `range()` in python
+- in kotlin, `..` is equivalent to `range()` in python
+  also, `# until #` can be used as well (for descending order, `# downto #`)
+  *the same syntax can be written as `#.until(#)` or `#.downTo(#)`*
 
 - It is self-explanatory, and please find the example below;
   
@@ -28,5 +30,8 @@
       print("Spring")
   }
   
+  if (month in 3 until 6){
+      print("Spring")
+  }
   // Spring
   ```
