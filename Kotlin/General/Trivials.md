@@ -35,3 +35,31 @@
   }
   // Spring
   ```
+
+## 3. Nullable
+
+- When variable is being assigned, datatype is being assigned, and **`null` is not to be assigned**
+
+- If null is to be assigned, question mark(?) should be descriptive next to datatype;
+  
+  ```kotlin
+  var name :String = "Pablo"
+  // name = null
+  
+  
+  var nameNull :String? = "Pablo"
+  nameNull = null
+  ```
+
+- The below two expression is basically returning the same result with nullable;
+  
+  ```kotlin
+  if (nullableName != null){
+      var lenNullable = nullableName.length
+  } else {
+      var lenNullable = null
+  }
+  
+  
+  var lenNullable = nullableName?.length
+  ```
