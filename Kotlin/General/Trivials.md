@@ -36,4 +36,14 @@
   // Spring
   ```
 
-## 
+## 3. lateinit
+
+- When declaring a class, using `lateinit`, a variable can be defined later on in the code:
+  
+  ```kotlin
+  class myClass(){
+      lateinit var arg1: String
+  }
+  ```
+
+- 
