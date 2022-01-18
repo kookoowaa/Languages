@@ -45,12 +45,13 @@
   }
   
   class ChildClass(param1: String, param2: Int, param3: Double): SuperClass(param1, param2){
-  
+  	override fun functionA(){
+          println("FunctionA from childClass")
+      }
+      
   }
   ```
 
-  
-
 - Sub class should have at least the same constructor as Super class; having additional constructors is no problem for sub class
 
-- Sub class is able to **override** 
+- Sub class is able to **override** features from Super class, but also able to choose which function with same name to use
