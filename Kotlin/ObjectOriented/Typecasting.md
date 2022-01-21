@@ -1,5 +1,4 @@
-# Interface
+# Typecasting
 
 - 
 
-https://myjamong.tistory.com/150
