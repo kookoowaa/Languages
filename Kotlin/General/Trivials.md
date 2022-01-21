@@ -46,4 +46,16 @@
   }
   ```
 
-- 
+## 4. List
+
+- When creating a list, `listof({item1}, {item2})` is bring used
+
+- A list can consist of single datatype or of any datatype followed by `: List<datatype>`
+
+  ```kotlin
+  var stringList: List<String> = listof("A", "B", "C")
+  var mixedList: List<Any> = listof(1, "String", 1.1, "etc.")
+  ```
+
+  
+
