@@ -120,3 +120,87 @@
 
   
 
+ ## Set and Map
+
+-  **Set** or `setOf()` creates collection without duplicated element
+
+  ```kotlin
+  fun main(){
+      
+      var test = setOf("aaa", "bbb", "ccc", "aaa")
+      print(test.size)
+      print(test)
+      
+  }
+  // 3
+  // [aaa, bbb, ccc]
+  ```
+
+- Set does not allow indexing, but it can be done via `.elementAt()`
+
+  ```kotlin
+  fun main(){
+      
+      var test = setOf("aaa", "bbb", "ccc", "aaa")
+      print(test[0])
+      print(test.elementAt(0))
+      
+  }
+  // error
+  // aaa
+  ```
+
+- Alternatively, it can be converted as a mutable list `.toMutableList()` to index and/or edit elements
+
+  ```kotlin
+  fun main(){
+      
+      var test = setOf("aaa", "bbb", "ccc", "aaa")
+      var testMutable = test.toMutableList()
+      print(testMutable[0])
+      
+      testMutable.add("ddd")
+      print(testMutable)
+      
+  }
+  // aaa
+  // [aaa, bbb, ccc, ddd]
+  ```
+
+- **Map** contains key-value set of collections just like python dictionary, where mapping is done via "to"
+
+  ```kotlin
+  fun main() {
+      
+      var test = mapOf(1 to "Monday", "two" to "Tuesday", "three" to 3)
+      println(test)
+      
+      for (k in test.keys){
+          println("$k for ${test[k]}")
+      }
+  }
+  // {1=Monday, two=Tuesday, three=3}
+  // 1 for Monday
+  // two for Tuesday
+  // three for 3
+  ```
+
+- Map is immutable when first declared, and can be converted mutable with `toMutableMap()`
+  When it becomes mutable, it can assign key as in index to collection followed by value (i.e. `mutableMap["this is index"] = "this is value"`)
+
+  ```kotlin
+  fun main() {
+      
+      var test = mapOf(1 to "Monday", "two" to "Tuesday", "three" to 3)
+   	test = test.toMutableMap()
+      
+      test[4] = 4
+      test["five"] = "Friday"
+      
+      print(test)
+  }
+  
+  //{1=Monday, two=Tuesday, three=3, 4=4, five=Friday}
+  ```
+
+  
