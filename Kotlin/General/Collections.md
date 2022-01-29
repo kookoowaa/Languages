@@ -203,4 +203,55 @@
   //{1=Monday, two=Tuesday, three=3, 4=4, five=Friday}
   ```
 
+## ArrayList
+
+- ArrayList is a dynamic array with dynamic length, able to read and write
+
+- The basic syntax to creat an empty is as follows `ArrayList<E>()`
+
+- There are a couple of fundamental functions that are very useful:
+
+   ```kotlin
+   fun main(){
+   
+      var test = ArrayList<Any?>()
+      test.add(1)
+      test.add("Two")   
+      // .add() adds element to the ArrayList
+
+      println(test)
+      // [1, Two]
+      println(test.get(1))
+      // .get() returns element of the index
+      // Two
+      
+      test.remove(1)
+      println(test)
+      // .remove() removes element at index
+      // [Two]      
+
+      test.clear()
+      println(test)
+      // .clear() removes all the elements in ArrayList
+      // []
+   }
+   ```
+
+- `.iterator()` works as for loop in collections that:
+
+   ```kotlin
+   fun main(){
+   
+      var test = ArrayList<Any?>()
+      test.add(1)
+      test.add("Two")   
+      // .add adds element to 
+
+	  var testloop = test.iterator()
+      
+      while (testloop.hasNext()){
+          println(testloop.next())
+      }
+   }
+   ```
   
