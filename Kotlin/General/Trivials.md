@@ -57,5 +57,27 @@
   var mixedList: List<Any> = listof(1, "String", 1.1, "etc.")
   ```
 
-  
 
+## 5. Visibility Modifier
+
+- Visibility modifiers are the keywords to restrict the use of elements according to the scope agreed, which are;
+
+  > `public`
+  >
+  > `private`
+  >
+  > `internal`
+  >
+  > `open`
+  >
+  > `protected`
+
+- `public` modifier allows element to be accessible from anywhere in the project, and it is a **default modifier** in Kotlin
+
+- `private` modifier allows element to be accessible only within the declared block
+
+- `internal` modifier makes the field visible only inside the module
+
+- `open` modifier allows class to be inheritable, where in Kotlin it is by default not inheritable
+
+- `protected` modifier allows visibility to its class or subclass only
