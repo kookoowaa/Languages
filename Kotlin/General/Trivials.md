@@ -81,3 +81,38 @@
 - `open` modifier allows class to be inheritable, where in Kotlin it is by default not inheritable
 
 - `protected` modifier allows visibility to its class or subclass only
+
+## 6. Nested and inner class
+
+- **Nested class** is class inside another class
+
+- **Inner class** is a kind of nested class, but with keyword inner
+
+- Inner class is different from nested class that it can access the data member of outer class (even if it is private)
+
+  ```kotlin
+  class OuterClass{
+      private var strName: String = "ID"
+  
+      class NestedClass{
+          var intPass: Int = 12345
+  
+      }
+      inner class innerClass{
+    //if declared with inner, the object can access strName from outer class
+          fun printOuter(){
+              println("Name is ${name}")
+          }
+      }
+  }
+  
+  fun main(){
+  	println(OuterClass().NestedClass().intPass)
+  	OuterClass().NestedClass().printOuter()
+  }
+  
+  // 12345
+  // Name is ID
+  ```
+
+  
