@@ -115,4 +115,40 @@
   // Name is ID
   ```
 
+
+## 7. Cast operators
+
+- There are unsafe cast operator called `as`, and safe cast operator `as?`
+
+- When using an unsafe cast operator, and data type does not match, it throws **ClassCastException**
+
+  When using a safe cast operator, and data type does not match, it returns `null`:
+
+  ```kotlin
+  fun main(){
+      var testSubject: Any? = "ABC"
+      var testString: String? = testSubject as String?
+  	println(testString)
+  }
+  // ABC
   
+  fun main(){
+      var testSubject: Any? = "ABC"
+      var testInt: Int? = testSubject as Int?
+    	println(testInt)
+  }
+  // java.lang.ClassCastExpetion....
+  
+  fun main(){
+      var testSubject: Any = "ABC"
+      var testString: String? = testSubject as? String
+      var testInt: Int? = testSubject as? Int
+   	println(testString)
+      println(testInt)
+  }
+  // ABC
+  // null
+  ```
+
+  
+
