@@ -150,5 +150,15 @@
   // null
   ```
 
-  
+
+## 8. Exception handling
+
+- Exception terminates program with runtime problems when:
+
+  > - running out of memory,
+  > - array out of bound,
+  > - division by zero,
+  > - and else
+
+### Throwable Class
 
