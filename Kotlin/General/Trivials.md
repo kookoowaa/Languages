@@ -160,5 +160,42 @@
   > - division by zero,
   > - and else
 
-### Throwable Class
+- There are four different keywords to handle exception which are:
 
+  > - `try`
+  > - `catch`
+  > - `finally`
+  > - `throw`
+
+### `try`
+
+- `try` block tests statement that may or may not throw an exception
+- It should be followed by `catch` and/or `finally`
+
+### `catch`
+
+- `catch` block catches exception from try block
+
+### `finally`
+
+- `finally` **always** execute regardless of an exception (important statement!)
+
+### `throw`
+
+- `throw` is used to throw an exception explicitly
+
+___
+
+- most typical syntax of exception handling is as follows:
+
+  ```kotlin
+  try{
+      // test statement block    
+  } catch (e: {Type of exception}){
+      // exception handling block if test throws an exception type 1
+  } catch (e: {Type of exception}){
+      // exception handling block if test throws an exception type 2
+  }
+  ```
+
+  
