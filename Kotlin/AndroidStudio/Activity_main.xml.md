@@ -23,3 +23,24 @@
   ```
 
 - Default인 `constraintlayout` 혹은 선택에 따라 `LinearLayout`으로 앱 화면을 꾸밀 수 있음
+
+- `constraintlayout`의 경우 레이아웃 상의 다른 object와의 상대적인 정의를 통해 레이아웃을 세팅하며
+
+- `LinearLayout`의 경우 말 그대로 순차적으로 레이아웃을 설정하게 되며, 따라서 `orientation`, `gravity` 등의 설정이 필수적임;
+
+  ```xml
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      tools:context=".MainActivity"
+      
+      android:orientation="vertical"
+      android:gravity="center_horizontal">
+   
+  </LinearLayout>
+  ```
+
+  
+
