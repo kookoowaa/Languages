@@ -45,15 +45,30 @@ person2 = Person("John", "Analyst", 20)
 person3 = Person("John", "Analyst", 20)  
 ```
 
+- `field`를 사용하면 (3.10 이후?) 다음과 같이 필드 별로 property를 지정 가능
+
+```python
+from dataclasses import dataclass, field
+
+@dataclass
+class Person:
+  name: str
+  job: str
+  age: int
+  _search: str = field(init = False, repr = False)
+  
+  def __post_init__(self):
+        self._search = f"{name.job.age}
+  
+## class 할당
+person1 = Person("Pablo", "BA", 35)
+```
+
 
 
 ## Dataclass의 강점
 
 ### 1.  Object가 아닌 data 비교가 가능
-
-```python
-
-```
 
 ### 2. dataclass object의 대표값 설정 및 정렬이 가능
 
