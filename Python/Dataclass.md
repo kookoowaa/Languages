@@ -45,6 +45,8 @@ person2 = Person("John", "Analyst", 20)
 person3 = Person("John", "Analyst", 20)  
 ```
 
+## Field
+
 - `field`를 사용하면 (3.10 이후?) 다음과 같이 필드 별로 property를 지정 가능
 
 ```python
