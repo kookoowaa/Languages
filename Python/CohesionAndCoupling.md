@@ -47,5 +47,4 @@
 
 - The code above is very much dependent to `email` object and changing something from one part of program will require changes from multiple areas
 
-- Coupling is inevitable, but it is highly recommended to minimize it
-
+- Coupling is inevitable, but it is highly recommended to minimize it 
