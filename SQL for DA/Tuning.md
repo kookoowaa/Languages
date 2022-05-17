@@ -23,3 +23,5 @@
 
 https://hahyuning.tistory.com/67
 https://taewooblog.tistory.com/m/63
+
+!! https://towardsdatascience.com/14-ways-to-optimize-bigquery-sql-for-ferrari-speed-at-honda-cost-632ec705979
