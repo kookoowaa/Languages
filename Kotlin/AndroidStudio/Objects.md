@@ -1,6 +1,8 @@
 # Objects
 
-## View
+## TextView
 
 ## Button
+
+## ProgressBar
 
