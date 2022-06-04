@@ -6,3 +6,6 @@
 
 ## ProgressBar
 
+## ImageView
+
+## TextInput
