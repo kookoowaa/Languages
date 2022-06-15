@@ -1,0 +1,43 @@
+Get a list of all tables, while in BigQuery Console, run the following:
+
+
+BQ console link: https://console.cloud.google.com/bigquery (you'll need to sign-in with a Google Account)
+
+
+Run this query to get all tables we'll be working with:
+
+SELECT project_id, dataset_id, table_id
+FROM `jrjames83-1171.sampledata.__TABLES__`
+
+
+The output should look like this. 
+
+project_id	dataset_id	table_id
+jrjames83-1171	sampledata	aoc2017day2
+jrjames83-1171	sampledata	blocks23
+jrjames83-1171	sampledata	conversion_paths
+jrjames83-1171	sampledata	customers
+jrjames83-1171	sampledata	film
+jrjames83-1171	sampledata	google_analytics
+jrjames83-1171	sampledata	inventory
+jrjames83-1171	sampledata	mobility_report
+jrjames83-1171	sampledata	order_items
+jrjames83-1171	sampledata	order_payments
+jrjames83-1171	sampledata	orders
+jrjames83-1171	sampledata	payments
+jrjames83-1171	sampledata	products
+jrjames83-1171	sampledata	rental
+jrjames83-1171	sampledata	sellers
+jrjames83-1171	sampledata	stock_prices
+jrjames83-1171	sampledata	top_questions
+
+
+When we query tables we use the general syntax of PROJECT.DATASET.TABLE 
+
+...for instance 
+
+SELECT * FROM jrjames83-1171.sampledata.aoc2017day2
+
+You can also use backticks
+
+SELECT * FROM `jrjames83-1171.sampledata.aoc2017day2`
