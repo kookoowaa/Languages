@@ -33,6 +33,20 @@ inner join tbl_sample2 as t2
 ....
 ```
 
+## 4. String format
+
+- At the end of calculation, having `|| {string}` adds format in the end
+
+- For example, if I were to add % in the end, the below should return 50% as a value:
+
+  ```sql
+  Select 
+  	1/2 *100 || "%"
+  From ...
+  ```
+
+  
+
 
 
 
