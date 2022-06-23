@@ -45,9 +45,18 @@ inner join tbl_sample2 as t2
   From ...
   ```
 
-  
+## 5. AND in join clause
 
+- It is often practical to join with conditional set of data, normally filtered by `where` clause
 
+- It is also applicable in a much simpler way by filtering with `AND` in join clasue instead:
 
-
-
+  ```sql
+  Select 
+  	*
+  From 
+  	Table1 t1
+  Join
+  	Table2 t2 on t1.id = t2.id AND t2.value > 20
+  ...
+  ```
