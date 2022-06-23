@@ -49,7 +49,9 @@ inner join tbl_sample2 as t2
 
 - It is often practical to join with conditional set of data, normally filtered by `where` clause
 
-- It is also applicable in a much simpler way by filtering with `AND` in join clasue instead:
+- It is also applicable in a much simpler way by filtering with `AND` in join clasue instead
+
+- This is different from having it filtered from `where` clause, and if it does, it is going to be very similar to inner join:
 
   ```sql
   Select 
