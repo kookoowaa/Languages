@@ -62,3 +62,43 @@ inner join tbl_sample2 as t2
   	Table2 t2 on t1.id = t2.id AND t2.value > 20
   ...
   ```
+
+## 6. extract vs. date_trunc
+
+- `extract()` returns value for the parameter it has requested for
+
+- `date_trunc()` returns timestamp until the parameter it has requested for in datetime
+
+- Below is the example:
+
+  ```sql
+  extract(year from "2022-06-01 11:19:33 UTC")
+  -- 2022
+  
+  date_trunc("2022-06-01 11:19:33 UTC", year)
+  -- 2022-01-01
+  
+  date_trunc("2022-06-01 11:15:22 UTC", week)
+  -- 2022-05-29
+  ```
+
+## 7. date_add(timestamp, Interval {n} {period})
+
+- `date_add()` allows handling timestamp data
+
+- It takes timestamp as an input, do the calculation based on the interval requested as below:
+
+  ```sql
+  date_add(date("2022-06-01"), Interval 1 day)
+  -- 2022-06-02
+  
+  date_add(date("2022-06-01"), Interval 1 month)
+  -- 2022-07-01
+  ```
+
+  
+
+
+
+
+
