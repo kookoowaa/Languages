@@ -16,22 +16,22 @@
 - Views stated with `with` are only valid in the query it belongs to
 - In a simple expression, `with` declares table in form of variable to be used repeatedly - subquery factoring
 
-``` sql
-with tbl_sample1 as (
-	Select ...
-    From ...
-)
-
-, tbl_sample2 as (
-	Select ...
-    From ...
-)
-
-Select ....
-From tbl_sample1 as t1
-inner join tbl_sample2 as t2
-....
-```
+    ``` sql
+    with tbl_sample1 as (
+        Select ...
+        From ...
+    )
+    
+    , tbl_sample2 as (
+        Select ...
+        From ...
+    )
+    
+    Select ....
+    From tbl_sample1 as t1
+    inner join tbl_sample2 as t2
+    ....
+    ```
 
 ## 4. String format
 
@@ -95,10 +95,4 @@ inner join tbl_sample2 as t2
   date_add(date("2022-06-01"), Interval 1 month)
   -- 2022-07-01
   ```
-
-  
-
-
-
-
 
