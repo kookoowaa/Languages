@@ -99,5 +99,20 @@
 - When using a window function, `over()` is always being used to set partition
 - However, when it is solely used by itself, it is simply partitioning every observation (over the entire window)
 
+## 9. sum(case when....)
 
+- `Case when ` can be used to categories and group observations
+
+- It can also be used along with calculation functions like sum() to generate statistical value for a group
+
+  ```sql
+  Select
+  	sum(case when {column 1} between 1 and 5 then {column 2} else 0) as sum_grp1
+  	sum(case when {column 1} between 6 and 10 then {column 2} else 0) as sum_grp2
+  	sum(case when {column 1} between 11 and 15 then {column 2} else 0) as sum_grp3
+  From
+  	...
+  ```
+
+  
 
