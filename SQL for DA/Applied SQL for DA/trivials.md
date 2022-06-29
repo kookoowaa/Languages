@@ -100,6 +100,11 @@
 - When using a window function, `over()` is always being used to set partition
 - However, when it is solely used by itself, it is simply partitioning every observation (over the entire window)
 
+## 8a. Window function
+
+- [ref](https://brunch.co.kr/@leoyang99/22)
+- 
+
 ## 9. sum(case when....)
 
 - `Case when ` can be used to categories and group observations
