@@ -103,7 +103,6 @@
 ## 8a. Window function
 
 - [ref](https://brunch.co.kr/@leoyang99/22)
-- 
 
 ## 9. sum(case when....)
 
