@@ -102,7 +102,44 @@
 
 ## 8a. Window function
 
-- [ref](https://brunch.co.kr/@leoyang99/22)
+- Basic syntax
+
+  ```sql
+  Aggregate_function() over()
+  ```
+
+  like `sum()`, `avg()`, `max()`, `rank()`, `dense_rank()`, `lead()`, `row_number()`, etc.
+
+- \+ grouping
+
+  ```sql
+  Aggregate_function() over(
+      partition by [col]
+      order by [col]
+  )
+  ```
+
+- \+ limited grouping
+
+  ```sql
+  Aggregate_function() over(
+      partition by [col]
+      order by [col]
+      rows between [rng] and [rng]
+  )
+  ```
+
+  For `rng`, the following can be used:
+
+  ``` sql
+  current row
+  n preceding
+  n following
+  unbounded preceding
+  unbounded following
+  ```
+
+- [reference](https://brunch.co.kr/@leoyang99/22)
 
 ## 9. sum(case when....)
 
