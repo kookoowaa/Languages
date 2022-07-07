@@ -100,7 +100,7 @@
 - When using a window function, `over()` is always being used to set partition
 - However, when it is solely used by itself, it is simply partitioning every observation (over the entire window)
 
-## 8a. Window function
+## 8a. Window function (Over())
 
 - Basic syntax
 
