@@ -106,8 +106,59 @@ WITH
     ROW_NUMBER() OVER(PARTITION BY customer_id ORDER BY amount DESC) AS ratingOrder
   FROM
     basetable )
+
+SELECT
+  customer_id,
+  rating,
+  amount
+FROM
+  bt2
+WHERE
+  ratingOrder <3
+ORDER BY
+  amtOrder DESC
+
+/*
+2022-07-12
+*/
+WITH
+  basetable AS (
+  SELECT
+    EXTRACT(quarter
+    FROM
+      p.payment_date) AS quarter,
+    p.customer_id,
+    f.rating,
+    SUM(p.amount) AS amount
+  FROM
+    `jrjames83-1171.sampledata.payments` p
+  LEFT JOIN
+    `jrjames83-1171.sampledata.rental` r
+  ON
+    p.rental_id = r.rental_id
+  LEFT JOIN
+    `jrjames83-1171.sampledata.inventory` i
+  ON
+    r.inventory_id = i.inventory_id
+  LEFT JOIN
+    `jrjames83-1171.sampledata.film` f
+  ON
+    f.film_id = i.film_id
+  GROUP BY
+    quarter,
+    p.customer_id,
+    f.rating),
+
+  bt2 AS (
+  SELECT
+    *,
+    MAX(amount) OVER(PARTITION BY customer_id, quarter) AS amtOrder,
+    ROW_NUMBER() OVER(PARTITION BY customer_id, quarter ORDER BY amount DESC) AS ratingOrder
+  FROM
+    basetable )
     
 SELECT
+  quarter,
   customer_id,
   rating,
   amount
