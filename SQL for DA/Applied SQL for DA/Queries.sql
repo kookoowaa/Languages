@@ -30,3 +30,44 @@ LEFT JOIN
 ON
   t1.customer_id = t2.customer_id
   AND t2.nth_order=1
+
+/*
+2022-07-11
+*/
+WITH
+  bt AS (
+  SELECT
+    *,
+    AVG(Close) OVER(ORDER BY Date ROWS BETWEEN 50 PRECEDING AND CURRENT ROW) AS fifty_ma,
+    AVG(Close) OVER(ORDER BY Date ROWS BETWEEN 200 PRECEDING AND CURRENT ROW) AS twohundred_ma
+  FROM
+    `jrjames83-1171.sampledata.stock_prices`
+  ORDER BY
+    Date ),
+    
+  bt2 AS (
+  SELECT
+    *,
+    CASE
+      WHEN fifty_ma > twohundred_ma THEN "Buy"
+    ELSE
+    "Sell"
+  END
+    AS flag
+  FROM
+    bt )
+
+
+SELECT
+  *
+FROM (
+  SELECT
+    *,
+    LAG(flag) OVER(ORDER BY date) AS prev,
+    flag <> LAG(flag) OVER(ORDER BY date) AS tipping_point,
+  FROM
+    bt2
+  ORDER BY
+    Date )
+WHERE
+  tipping_point =TRUE
