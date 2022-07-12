@@ -168,3 +168,25 @@ WHERE
   ratingOrder <3
 ORDER BY
   amtOrder DESC
+
+
+/*
+2022-07-13
+*/
+WITH
+  bt AS(
+  SELECT
+    tag,
+    title,
+    id,
+    SPLIT(title, ' ') AS words
+  FROM
+    `jrjames83-1171.sampledata.top_questions`)
+    
+SELECT
+  DISTINCT tag,
+  title,
+  word
+FROM
+  bt,
+  UNNEST(words) AS word
