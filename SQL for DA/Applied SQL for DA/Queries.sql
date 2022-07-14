@@ -171,7 +171,7 @@ ORDER BY
 
 
 /*
-2022-07-13
+2022-07-14
 */
 WITH
   bt AS(
@@ -181,12 +181,40 @@ WITH
     id,
     SPLIT(title, ' ') AS words
   FROM
-    `jrjames83-1171.sampledata.top_questions`)
-    
+    `jrjames83-1171.sampledata.top_questions`),
+
+  word_table AS(
+  SELECT
+    tag,
+    title,
+    TRIM(LOWER(word)) AS word
+  FROM
+    bt,
+    UNNEST(words) AS word
+  ORDER BY
+    title )
+
 SELECT
-  DISTINCT tag,
-  title,
-  word
-FROM
-  bt,
-  UNNEST(words) AS word
+  tag,
+  word,
+  freq
+
+FROM (
+  SELECT
+    tag,
+    word,
+    COUNT(word) AS freq,
+    ROW_NUMBER() OVER(PARTITION BY tag ORDER BY COUNT(word) DESC) AS row_n
+  FROM
+    word_table
+  WHERE
+    LENGTH(word) > 4
+  GROUP BY
+    tag,
+    word
+  ORDER BY
+    tag,
+    freq DESC )
+
+WHERE
+  row_n <3
