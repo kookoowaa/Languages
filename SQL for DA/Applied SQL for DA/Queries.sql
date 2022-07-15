@@ -218,3 +218,23 @@ FROM (
 
 WHERE
   row_n <3
+
+/*
+2022-07-15 (REGEX)
+*/
+WITH
+  bt AS (
+  SELECT
+    *,
+    REGEXP_EXTRACT(occurrence_range, r"\d+") AS low_char,
+    REGEXP_EXTRACT(occurrence_range, r"-(\d+)") AS high_char,
+    ARRAY_LENGTH(REGEXP_EXTRACT_ALL(datafield, character)) AS n_match
+  FROM
+    `jrjames83-1171.sampledata.aoc2017day2` )
+    
+SELECT
+  bt.occurrence_range,
+  bt.n_match BETWEEN CAST(low_char AS Int64)
+  AND CAST(high_char AS Int64) AS test
+FROM
+  bt
