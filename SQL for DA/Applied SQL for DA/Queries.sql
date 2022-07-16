@@ -1,7 +1,6 @@
 /*
 2022-07-10
 */
-
 WITH
   t1 AS (
   SELECT
