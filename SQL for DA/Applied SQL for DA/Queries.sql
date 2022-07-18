@@ -242,3 +242,26 @@ FROM (
     bt )
 WHERE
   test
+
+/*
+2022-07-18 (REGEX)
+*/
+
+WITH
+  bt AS (
+  SELECT
+    CAST(SPLIT(occurrence_range, '-')[OFFSET(0)] AS int) AS min_occur,
+    CAST(SPLIT(occurrence_range, '-')[OFFSET(1)] AS int) AS max_occur,
+    ARRAY_LENGTH(REGEXP_EXTRACT_ALL(datafield, character)) AS cnt
+  FROM
+    `jrjames83-1171.sampledata.aoc2017day2`)
+    
+SELECT
+  cnt BETWEEN min_occur
+  AND max_occur AS validation,
+  COUNT(*) AS cnt
+FROM
+  bt
+GROUP BY
+  cnt BETWEEN min_occur
+  AND max_occur
