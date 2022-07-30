@@ -23,7 +23,7 @@
 > )
 > ```
 
-> - `VALUES` 구분으로 유사 테이블 만들기
+> - `VALUES` 구분으로 유사 테이블 만들기 (postgres에서 values 구문은 select, from 절에서 사용 불가) 
 > ```sql
 > WITH bt(id, device_name) AS (
 > VALUES
