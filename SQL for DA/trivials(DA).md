@@ -33,8 +33,8 @@
 > )
 > ```
 
-> -  DDL로 임시 테이블 만들기 
-> '''sql
+> -  DDL로 임시 테이블 만들기  
+> ```sql
 > CREATE TEMPORARY TABLE base_table(
 >   col_1 INT NOT NULL,
 >   col_2 DATETIME NOT NULL,
