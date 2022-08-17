@@ -41,3 +41,7 @@
 > )
 > ```
 
+## Group by 유의사항
+- Select절에서 as로 alias한 colum명과, From 절의 column명이 일치할 경우, Group by 절에서 명시적으로 따르는 column 이름은 from 절의 column명이 우선시 됨
+- 따라서 되도록이면 alias 시 원천 coumn명과는 다른 이름을 사용하는 것을 권장
+- 아닐 시 `table.column` 형태로 명시해 주어야 충돌이 발생하지 않음
