@@ -53,6 +53,24 @@
 
 ## 임시테이블
 - CTE 사용도 좋지만 반복적으로 사용되는 쿼리는 테이블, 혹은 임시테이블로 사용해 보는 것도 좋은 생각임
+- 임시 테이블의 경우 세션이 종료되면 자동으로 삭제 됨
+- 기본 syntax는 다음과 같음 (redshift):
+> ```sql
+> CREATE TEMP TABLE test_table (
+>    col1    varchar(max),
+>    col2    bigint(max),
+>    col3    varchar(max)
+> )
+> ;
+> ```
+
+- 혹은 기존의 테이블을 활용하여 CTE처럼 임시 테이블을 만드는 것도 가능
+> ```sql
+> CREATE TEMP TABLE test_table AS
+>   SELECT *
+>   FROM tbl_A
+>   WHERE date > dateadd(day, -7, sysdate);
+> ```
 
 ## 윈도우 함수
 - 
