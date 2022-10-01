@@ -71,6 +71,3 @@
 >   FROM tbl_A
 >   WHERE date > dateadd(day, -7, sysdate);
 > ```
-
-## 윈도우 함수
-- 
