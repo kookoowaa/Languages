@@ -8,6 +8,9 @@ Stacks for:
 Laguages such as:
 > - Python
 > - SQL
-> - Kotlin
-> - Basic Linux
+> - JavaScript 
 > - Java
+> - Kotlin
+> - Linux
+
+
