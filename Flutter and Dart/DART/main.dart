@@ -13,6 +13,8 @@ class Player {
   }
 }
 
+
+
 void main() {
   var apiData = [
     {
@@ -31,6 +33,7 @@ void main() {
       "xp": 0,
     },
   ];
+
 
   apiData.forEach((playerJson) {
       var player = Player.fromJson(playerJson);
