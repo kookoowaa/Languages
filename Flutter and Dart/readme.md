@@ -1,8 +1,6 @@
-Flutter -> Framework
+
 
 Dart -> Language
-
-
 
 [2023년. Flutter 를 배워야하는 이유. - YouTube](https://youtu.be/l05wkkCCe2Y)
 
